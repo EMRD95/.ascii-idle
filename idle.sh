@@ -5,7 +5,7 @@
 while :
 do
 	idle=`xprintidle`
-	if [ $idle -gt 6000 ]
+	if [ $idle -gt 60000 ]
 	then
 		bash test7.sh
 	fi
