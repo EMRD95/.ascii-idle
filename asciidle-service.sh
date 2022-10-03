@@ -10,7 +10,7 @@ Description=Asciidle Service
 
 Type=simple
 
-ExecStart=/bin/bash ~/.asciidle/idle.sh
+ExecStart=~/.asciidle/idle.sh
 
 [Install]
 
