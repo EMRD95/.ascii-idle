@@ -7,6 +7,6 @@ do
 	idle=`xprintidle`
 	if [ $idle -gt 60000 ]
 	then
-		bash test7.sh
+		bash asciidle.sh
 	fi
 done
