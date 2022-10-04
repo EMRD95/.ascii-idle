@@ -79,4 +79,4 @@ done &' >> ~/.bashrc
     echo "Script added to .bashrc"
 fi
 
-echo 'exit and relaunch the terminal for all changes to apply'
+echo "$(tput setaf 1) exit and relaunch the terminal for all changes to apply"
