@@ -35,3 +35,6 @@ source ~/.bash_aliases
 # create a temporary alias, permanent alias may only activate after reboot
 
 alias asciidle='bash asciidle.sh'
+
+#run asciidle in the bash terminal at all time, time is in milliseconds, 60000=1m 600000=10m
+echo "while true do if [[ $(xprintidle) -gt 600000 ]] then cmatrix fi done &" >> .bashrc
