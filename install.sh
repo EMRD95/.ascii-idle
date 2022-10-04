@@ -1,7 +1,5 @@
 #!/bin/bash
 
-## will install asciidle as a service on the system
-
 # dependencies installation
 
 if ! command -v lolcat >/dev/null 2>&1; then
@@ -28,7 +26,7 @@ if ! grep -q "asciidle='bash asciidle.sh'" ~/.bash_aliases; then
     echo "alias asciidle='bash asciidle.sh'" >> ~/.bash_aliases
 fi
 
-# activate alias on boot
+# activate alias
 
 source ~/.bash_aliases
 
