@@ -12,7 +12,13 @@ if ! command -v xprintidle >/dev/null 2>&1; then
   sudo apt-get install xprintidle
 fi
 
+
 # asciidle alias creation
+
+if [ ! -f ~/.bash_aliases ]; then
+    touch ~/.bash_aliases
+fi
+
 # if a asciidle alias already exists it will be replaced
 
 if [ -e ~/.bash_aliases ]; then
