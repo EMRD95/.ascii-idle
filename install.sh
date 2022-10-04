@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+if [[ "$1" == "-v" ]]; then
+
+set -x
+
+fi
+
 # dependencies installation
 
 if ! command -v lolcat >/dev/null 2>&1; then
