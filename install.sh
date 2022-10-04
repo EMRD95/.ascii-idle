@@ -58,16 +58,14 @@ else
 
     echo 'while true
 do
-
+sleep 5
 if [[ $(xprintidle) -gt 5000 ]]
 then
 bash ~/.asciidle/asciidle.sh
-sleep 5
 fi
-
 done &' >> ~/.bashrc
 
     echo "Script added to .bashrc"
 fi
 
-echo "$(tput setaf 1) Exit and relaunch the terminal for all changes to apply."
+echo "$(tput setaf 1) exit and relaunch the terminal for all changes to apply"
