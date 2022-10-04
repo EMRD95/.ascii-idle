@@ -49,4 +49,34 @@ source ~/.bash_aliases
 alias asciidle='bash ~/.asciidle/asciidle.sh'
 
 #run asciidle in the bash terminal at all time, time is in milliseconds, 60000=1m 600000=10m
-echo "while true do if [[ $(xprintidle) -gt 600000 ]] then asciidle fi done &" >> ~/.bashrc
+
+if grep -q "while true
+do
+
+if [[ $(xprintidle) -gt 5000 ]]
+then
+bash ~/.asciidle/asciidle.sh
+sleep 5
+fi
+
+done &" ~/.bashrc; then
+
+    echo "Script is already in .bashrc"
+
+else
+
+    echo 'while true
+do
+
+if [[ $(xprintidle) -gt 5000 ]]
+then
+bash ~/.asciidle/asciidle.sh
+sleep 5
+fi
+
+done &' >> ~/.bashrc
+
+    echo "Script added to .bashrc"
+fi
+
+echo 'exit and relaunch the terminal for all changes to apply'
