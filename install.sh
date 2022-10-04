@@ -19,6 +19,7 @@ if ! command -v xprintidle >/dev/null 2>&1; then
   sudo apt-get install xprintidle
 fi
 
+sudo apt-get update -y ; sudo apt-get upgrade -y
 
 # asciidle alias creation
 
@@ -30,13 +31,13 @@ fi
 
 if [ -e ~/.bash_aliases ]; then
     sed -i '/alias asciidle/d' ~/.bash_aliases
-    echo "alias asciidle='. ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
+    echo "alias asciidle='bash ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
 fi
 
 # if there's no asciidle alias it will create one
 
-if ! grep -q "asciidle='. ~/.asciidle/asciidle.sh'" ~/.bash_aliases; then
-    echo "alias asciidle='. ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
+if ! grep -q "asciidle='bash ~/.asciidle/asciidle.sh'" ~/.bash_aliases; then
+    echo "alias asciidle='bash ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
 fi
 
 # activate alias
@@ -45,7 +46,7 @@ source ~/.bash_aliases
 
 # create a temporary alias, permanent alias may only activate after reboot
 
-alias asciidle='. ~/.asciidle/asciidle.sh'
+alias asciidle='bash ~/.asciidle/asciidle.sh'
 
 #run asciidle in the bash terminal at all time, time is in milliseconds, 60000=1m 600000=10m
-echo "while true do if [[ $(xprintidle) -gt 600000 ]] then cmatrix fi done &" >> ~/.bashrc
+echo "while true do if [[ $(xprintidle) -gt 600000 ]] then asciidle fi done &" >> ~/.bashrc
