@@ -4,6 +4,8 @@
 ## The script stop when pressing ctrl+c
 
 trap "exit" INT
+tput rmam
+trap 'tput smam' EXIT
 while true
 do
 	for i in $(ls ~/.asciidle/txt/*.txt | shuf -n 1)
