@@ -4,7 +4,7 @@ if [[ `grep -c "##ASCIIDLE" ~/.bashrc` -gt 0 ]]; then
         sed -i '/##ASCIIDLE/,/##ASCIIDLE/d' ~/.bashrc
 fi
 
-printf "Close all terminals and reopen one before installing"
+printf "Close the terminal(s) and reopen one for the installation."
 read -r -s -n 1 -p ""
 
 # Verbose mode with -n
@@ -64,12 +64,12 @@ b=$((a+1))
 
 printf "##ASCIIDLE\n" >> ~/.bashrc
 
-printf "\nhow much time in seconds?"
+printf "\nAfter how much time shoudl asciidle start (in seconds)?"
 read time
 time=$((time*1000))
 printf  '\nwhile true \n do \n sleep 5 \n if [ $(xprintidle)' >> ~/.bashrc
 printf " -gt $time ]" >> ~/.bashrc
-printf "Only start asciidle if there's no active output in the terminal (experimental). Yes or no? (y/n) "
+printf "Only start asciidle if there's nothing running in the terminal (experimental). Yes or no? (y/n) "
 read response
 
 if [ "$response" = "n" ]; then
