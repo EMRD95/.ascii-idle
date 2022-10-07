@@ -58,10 +58,6 @@ source ~/.bash_aliases
 
 #Auto config script for the .basrc file
 
-#!/bin/bash
-
-
-
 
 a=$(ps -o command | grep -v command | wc -l)
 b=$((a+1))
