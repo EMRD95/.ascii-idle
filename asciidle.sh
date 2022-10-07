@@ -10,6 +10,6 @@ while true
 do
 	for i in $(ls ~/.asciidle/txt/*.txt | shuf -n 1)
 	do
-		lolcat $i -af -d 3
+		lolcat $i -af -d 2
 	done
 done
