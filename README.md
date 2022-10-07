@@ -15,4 +15,4 @@ git clone to the home/user folder.
 
 Made for Debian/Ubuntu.
 
-It just works.
+![alt text](https://files.catbox.moe/klulg5.jpg)
