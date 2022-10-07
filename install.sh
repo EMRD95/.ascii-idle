@@ -84,7 +84,20 @@ printf '\nthen \n ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
 
 printf "\n##ASCIIDLE\n" >> ~/.bashrc
 
-    echo "Close and reopen the terminal for all changes to apply."
+printf "Do you want to add Pinups the txt folder? Yes or no? (y/n) "
+read response
+
+if [ "$response" = "y" ]; then
+for i in {00..48}
+do
+  wget https://asciipr0n.com/pr0n/pinups/pinup$i.txt
+done
+mv pinup*.txt ~/.asciidle/txt
+fi
+
+
+
+    echo "Close and reopen the terminal(s) for all changes to apply!!!"
 
 
 ##Restart Shell
