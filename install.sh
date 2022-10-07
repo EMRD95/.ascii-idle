@@ -64,7 +64,7 @@ b=$((a+1))
 
 printf "##ASCIIDLE\n" >> ~/.bashrc
 
-printf "\nAfter how much time shoudl asciidle start (in seconds)?"
+printf "\nAfter how much time should asciidle start (in seconds)?"
 read time
 time=$((time*1000))
 printf  '\nwhile true \n do \n sleep 5 \n if [ $(xprintidle)' >> ~/.bashrc
@@ -84,7 +84,7 @@ printf '\nthen \n ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
 
 printf "\n##ASCIIDLE\n" >> ~/.bashrc
 
-    echo 'Script added to .bashrc'
+    echo "Close and reopen the terminal for all changes to apply."
 
 
 ##Restart Shell
@@ -94,5 +94,5 @@ exec bash
 
 
 
-echo "Close and reopen the terminal for all changes to apply."
+
 
