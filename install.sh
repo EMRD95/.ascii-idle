@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [[ `grep -c "##ASCIIDLE" ~/.bashrc` -gt 0 ]]; then
+        sed -i '/##ASCIIDLE/,/##ASCIIDLE/d' ~/.bashrc
+fi
+
+printf "Close all terminals and reopen one before installing"
+read -r -s -n 1 -p ""
+
+# Verbose mode with -n
 
 if [[ "$1" == "-v" ]]; then
 
@@ -7,7 +15,7 @@ set -x
 
 fi
 
-# dependencies installation
+# Dependencies installation
 
 if ! command -v lolcat >/dev/null 2>&1; then
   echo "Installing lolcat"
@@ -19,53 +27,76 @@ if ! command -v xprintidle >/dev/null 2>&1; then
   sudo apt-get install xprintidle
 fi
 
-sudo apt-get update -y ; sudo apt-get upgrade -y
+#sudo apt-get update -y ; sudo apt-get upgrade -y
 
-# asciidle alias creation
+# Asciidle alias creation
 
 if [ ! -f ~/.bash_aliases ]; then
     touch ~/.bash_aliases
 fi
 
-# if a asciidle alias already exists it will be replaced
+# If a asciidle alias already exists it will be replaced
 
 if [ -e ~/.bash_aliases ]; then
     sed -i '/alias asciidle/d' ~/.bash_aliases
     echo "alias asciidle='bash ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
 fi
 
-# if there's no asciidle alias it will create one
+# If there's no asciidle alias it will create one
 
 if ! grep -q "asciidle='bash ~/.asciidle/asciidle.sh'" ~/.bash_aliases; then
     echo "alias asciidle='bash ~/.asciidle/asciidle.sh'" >> ~/.bash_aliases
 fi
 
-# activate alias
+# Activate alias
 
 source ~/.bash_aliases
 
-# create a temporary alias, permanent alias may only activate after reboot
+# Create a temporary alias, permanent alias may only activate after reboot
 
-alias asciidle='bash ~/.asciidle/asciidle.sh'
+#alias asciidle='bash ~/.asciidle/asciidle.sh'
 
-#run asciidle in the bash terminal at all time, time is in milliseconds, 60000=1m 600000=10m
+#Auto config script for the .basrc file
 
-if grep -q xprintidle ~/.bashrc; then
+#!/bin/bash
 
-    echo "Script is already in .bashrc"
 
+
+
+a=$(ps -o command | grep -v command | wc -l)
+b=$((a+1))
+
+printf "##ASCIIDLE\n" >> ~/.bashrc
+
+printf "\nhow much time in seconds?"
+read time
+time=$((time*1000))
+printf  '\nwhile true \n do \n sleep 5 \n if [ $(xprintidle)' >> ~/.bashrc
+printf " -gt $time ]" >> ~/.bashrc
+printf "Only start asciidle if there's no active output in the terminal (experimental). Yes or no? (y/n) "
+read response
+
+if [ "$response" = "n" ]; then
+    yesorno="#"
 else
-
-    echo 'while true
-do
-sleep 5
-if [[ $(xprintidle) -gt 5000 ]]
-then
-bash ~/.asciidle/asciidle.sh
+    yesorno=""
 fi
-done &' >> ~/.bashrc
+printf " $yesorno&&" >> ~/.bashrc
+printf ' [[ $(ps -o command | grep -v command | wc -l) -lt' >> ~/.bashrc
+printf " $b ]]" >> ~/.bashrc
+printf '\nthen \n ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
 
-    echo "Script added to .bashrc"
-fi
+printf "\n##ASCIIDLE\n" >> ~/.bashrc
 
-echo "$(tput setaf 1) exit and relaunch the terminal for all changes to apply"
+    echo 'Script added to .bashrc'
+
+
+##Restart Shell
+
+source ~/.bashrc
+exec bash
+
+
+
+echo "Close and reopen the terminal for all changes to apply."
+
