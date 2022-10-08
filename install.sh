@@ -27,7 +27,8 @@ if ! command -v xprintidle >/dev/null 2>&1; then
   sudo apt-get install xprintidle
 fi
 
-#sudo apt-get update -y ; sudo apt-get upgrade -y
+sudo apt-get update -y #; sudo apt-get upgrade -y
+chmod 775 asciidle.sh
 
 # Asciidle alias creation
 
