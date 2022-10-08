@@ -88,7 +88,7 @@ fi
 printf " $yesorno&&" >> ~/.bashrc
 printf ' [[ $(ps -t | wc -l) -lt' >> ~/.bashrc
 printf " $b ]]" >> ~/.bashrc
-printf '\nthen \n ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
+printf '\nthen \n bash ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
 
 printf "\n##ASCIIDLE\n" >> ~/.bashrc
 
@@ -112,3 +112,7 @@ fi
 
 source ~/.bashrc
 exec bash
+
+
+
+
