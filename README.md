@@ -61,3 +61,5 @@ Starting asciidle in a terminal multpilexer such as tmux or screen would be an o
 Asciidle can also configure on top of which processes it shouldn't start. By default asciidle will not start on top of apt-get.
 
 Asciidle is configured in the user profile, so it will only start from the user with which you installed asciidle and not system wide.
+
+Can also be used with other terminal screensavers such as cmatrix or pipes.sh, just edit .bashrc or the install script.
