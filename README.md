@@ -55,6 +55,7 @@ Asciidle uses xprintidle to start the script when the user is idle for x amount 
 
 Asciidle also calculates how many processes run normally on a newly opened terminal, and will not start if more processes are running to avoid hiding and losing current work. It is based on the current tty, so you can have multiple terminals open and asciidle will only start in the unused ones.
 It's an experimental feature that can be disabled, seems to work fine for now.
+
 Starting asciidle in a terminal multpilexer such as tmux or screen would be a better practice but I couldn't manage to set that up.
 
 Asciidle can also configure on top of which processes it shouldn't start. By default asciidle will not start on top of apt-get.
