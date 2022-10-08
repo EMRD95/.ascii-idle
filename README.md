@@ -21,6 +21,26 @@ bash install.sh
 
 Follow instructions.
 
+>Close the terminal(s) and launch installation on a fresh one for best results.
+
+It's better if you start the install script on a freshly opened terminal.
+
+>After how much time should asciidle start (in seconds)?
+
+Set required time in seconds. To start asciidle after 10 minutes idle write 600 then press Enter.
+
+>Only start asciidle if there's nothing running in the terminal (experimental).
+
+Will only start asciidle if ps -t return a value less than ps -t on a fresh terminal + 1.
+
+>Do you want to add Pinups to the txt folder?
+
+Populate the txt folder with ASCII art from https://asciipr0n.com/pr0n/pinups.html
+
+>Close and reopen the terminal(s) for all changes to apply!!!
+
+Your .bashrc profile file must be reload, best way is to close and reopen the terminal.
+
 The script is very simple so you can also set it up yourself the way you want manually.
 
 Tested on Debian and Ubuntu.
