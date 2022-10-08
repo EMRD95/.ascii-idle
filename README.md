@@ -1,7 +1,7 @@
 # .asciidle
 Simple Shell script to display ascii art in the terminal when idle.
 
-Can be used as a linux terminal screensaver or directly from the asciidle script.
+Can be used as a linux terminal "screensaver" (increases CPU load a bit) or directly from the asciidle script.
 
 Ascii art must be stored in the txt folder with a .txt format.
 
