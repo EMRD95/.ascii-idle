@@ -1,5 +1,5 @@
 # .asciidle
-Bash program to display ascii art in the terminal when idle.
+Shell program to display ascii art in the terminal when idle.
 
 Can be used as a linux terminal screensaver or directly from the asciidle script.
 
