@@ -47,6 +47,10 @@ Tested on Debian and Ubuntu.
 
 ![alt text](https://files.catbox.moe/klulg5.jpg)
 
+https://user-images.githubusercontent.com/114953576/194711678-f60b0fc1-1eab-4a00-b833-771825b08c1c.mp4
+
+
+
 # Details
 
 Asciidle uses lolcat and xprintidle as dependencies, will install from the script.
