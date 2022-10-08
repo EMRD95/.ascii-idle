@@ -61,7 +61,14 @@ source ~/.bash_aliases
 
 
 a=$(ps -o command | grep -v command | wc -l)
-b=$((a+1))
+
+if [[ -z "$(grep '##ASCIIDLE' ~/.bashrc)" ]]; then
+  b=$((a+1))
+else
+  b=$((a-1))
+fi
+
+
 
 printf "##ASCIIDLE\n" >> ~/.bashrc
 
@@ -105,7 +112,6 @@ fi
 
 source ~/.bashrc
 exec bash
-
 
 
 
