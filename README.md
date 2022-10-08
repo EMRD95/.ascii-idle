@@ -57,3 +57,5 @@ Asciidle also calculates how many processes run normally on a newly opened termi
 It's an experimental feature that can be disabled, seems to works fine for now.
 
 Asciidle can also configure on top of which processes it shouldn't start. By default asciidle will not start on top of apt-get.
+
+Asciidle is configured in the user profile, so it will only start from the user with which you installed asciidle and not system wide.
