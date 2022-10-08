@@ -1,4 +1,4 @@
-# .asciidle
+# asciidle
 
 [asciidle.webm](https://user-images.githubusercontent.com/114953576/194713965-12f07561-ed06-48b0-8e48-ea4080e94a38.webm)
 
