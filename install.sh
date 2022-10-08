@@ -4,7 +4,7 @@ if [[ `grep -c "##ASCIIDLE" ~/.bashrc` -gt 0 ]]; then
         sed -i '/##ASCIIDLE/,/##ASCIIDLE/d' ~/.bashrc
 fi
 
-printf "Close the terminal(s) and reopen one for the installation."
+printf "Close the terminal(s) and launch installation on a fresh one for best results."
 read -r -s -n 1 -p ""
 
 # Verbose mode with -n
