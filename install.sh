@@ -85,7 +85,7 @@ printf '\nthen \n ~/.asciidle/asciidle.sh \n fi \n done &\n' >> ~/.bashrc
 
 printf "\n##ASCIIDLE\n" >> ~/.bashrc
 
-printf "Do you want to add Pinups the txt folder? Yes or no? (y/n) "
+printf "Do you want to add Pinups to the txt folder? Yes or no? (y/n) "
 read response
 
 if [ "$response" = "y" ]; then
