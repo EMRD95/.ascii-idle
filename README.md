@@ -5,7 +5,7 @@ Can be used as a linux terminal "screensaver" (increases CPU load a bit) or dire
 
 Ascii art must be stored in the txt folder with a .txt format.
 
-The script pick up .txt files randomly and display them on the terminal.
+The script pick up .txt files randomly and display them on the terminal vertically.
 
 Exit with ctrl + c
 
