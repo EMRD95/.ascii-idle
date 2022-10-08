@@ -7,6 +7,8 @@ Ascii art must be stored in the txt folder with a .txt format.
 
 The script pick up .txt files randomly and display them on the terminal.
 
+Exit with ctrl + c
+
 Auto install script available, it create an alias to run the script from the command "asciidle" or start it when you're idle for x amount of time.
 
 # Installation
