@@ -45,8 +45,7 @@ The script is very simple so you can also set it up yourself the way you want ma
 
 Tested on Debian and Ubuntu.
 
-https://user-images.githubusercontent.com/114953576/194711678-f60b0fc1-1eab-4a00-b833-771825b08c1c.mp4
-
+[asciidle.webm](https://user-images.githubusercontent.com/114953576/194713965-12f07561-ed06-48b0-8e48-ea4080e94a38.webm)
 
 # Details
 
