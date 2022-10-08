@@ -31,7 +31,7 @@ Tested on Debian and Ubuntu.
 
 Asciidle uses lolcat and xprintidle as dependencies, will install from the script.
 
-Asciidle uses xprintidle to start the script when the user is idle for x amount of times.
+Asciidle uses xprintidle to start the script when the user is idle for x amount of times (no keyboard input detected).
 
 Asciidle also calculates how many processes run normally on a newly opened terminal, and will not start if more processes are running to avoid hiding and losing current work.
 It's an experimental feature that can be disabled, seems to works fine for now.
