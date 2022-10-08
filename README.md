@@ -1,4 +1,7 @@
 # .asciidle
+
+[asciidle.webm](https://user-images.githubusercontent.com/114953576/194713965-12f07561-ed06-48b0-8e48-ea4080e94a38.webm)
+
 Simple Shell script to display ASCII art in the terminal when idle.
 
 Can be used as a Linux terminal "screensaver" (increases CPU load a bit) or directly from the asciidle script.
@@ -44,8 +47,6 @@ Your .bashrc profile file must be reload, the best way is to close and reopen th
 The script is very simple so you can also set it up yourself the way you want manually.
 
 Tested on Debian and Ubuntu.
-
-[asciidle.webm](https://user-images.githubusercontent.com/114953576/194713965-12f07561-ed06-48b0-8e48-ea4080e94a38.webm)
 
 # Details
 
