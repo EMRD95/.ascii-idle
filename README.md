@@ -9,7 +9,7 @@ The script pick up .txt files randomly and display them on the terminal vertical
 
 Exit with ctrl + c
 
-Auto install script available, it creates an alias to run the script from "asciidle" or start it when you're idle for x amount of time. There's some hack to to not start it on top of an other interfaced process. The install.sh script can be run an unlimited amount of time to change configurations.
+The auto install script will creates an alias to run the script from "asciidle" or start it when you're idle for x amount of time. There's some hack to to not start it on top of an other interfaced process. The install.sh script can be run an unlimited amount of time to change configurations.
 
 # Installation
 
