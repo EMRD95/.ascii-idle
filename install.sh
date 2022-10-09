@@ -25,6 +25,16 @@ if ! command -v xprintidle >/dev/null 2>&1; then
   sudo apt-get install xprintidle
 fi
 
+if ! command -v xdotool >/dev/null 2>&1; then
+  echo "Installing xdotool"
+  sudo apt-get install xdotool
+fi
+
+if ! command -v wget >/dev/null 2>&1; then
+  echo "Installing wget"
+  sudo apt-get install wget
+fi
+
 sudo apt-get update -y #; sudo apt-get upgrade -y
 chmod 775 asciidle.sh
 
@@ -74,9 +84,9 @@ printf "##ASCIIDLE\n" >> ~/.bashrc
 printf "\nAfter how much time should asciidle start (in seconds)? "
 read time
 time=$((time*1000))
-printf  '\nwhile true \n do \n sleep 5 \n if [ $(xprintidle)' >> ~/.bashrc
+printf  '\nwhile true \n do \n sleep 10 \n x=$(xdotool getmouselocation --shell 2>/dev/null) \n sleep 10 \n y=$(xdotool getmouselocation --shell 2>/dev/null) \n if [ $(xprintidle)' >> ~/.bashrc
 printf " -gt $time ]" >> ~/.bashrc
-printf ' && [ -z "$(ps t | grep apt-get | grep -v grep)" ]' >> ~/.bashrc
+printf ' && [ -z "$(ps t | grep apt-get | grep -v grep)" ] && [[ "$x" = "$y" ]]' >> ~/.bashrc
 printf "Only start asciidle if there's nothing running in the terminal (experimental). Yes or no? (y/n) "
 read response
 
@@ -98,9 +108,8 @@ read response
 if [ "$response" = "y" ]; then
 for i in {00..48}
 do
-  wget https://asciipr0n.com/pr0n/pinups/pinup$i.txt
+  wget -O ~/.asciidle/txt/pinups$i.txt https://asciipr0n.com/pr0n/pinups/pinup$i.txt
 done
-mv pinup*.txt ~/.asciidle/txt
 fi
 
 
