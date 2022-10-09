@@ -50,7 +50,7 @@ Tested on Debian and Ubuntu.
 
 # Details
 
-Asciidle uses lolcat and xprintidle as dependencies, will install from the script.
+Asciidle uses lolcat, xdotool, wget and xprintidle as dependencies, will install from the script.
 
 Asciidle uses xprintidle to start the script when the user is idle for x amount of times (no keyboard input detected).
 
