@@ -84,9 +84,9 @@ printf "##ASCIIDLE\n" >> ~/.bashrc
 printf "\nAfter how much time should asciidle start (in seconds)? "
 read time
 time=$((time*1000))
-printf  '\nwhile true \n do \n sleep 10 \n x=$(xdotool getmouselocation --shell 2>/dev/null) \n sleep 10 \n y=$(xdotool getmouselocation --shell 2>/dev/null) \n if [ $(xprintidle)' >> ~/.bashrc
-printf " -gt $time ]" >> ~/.bashrc
-printf ' && [ -z "$(ps t | grep apt-get | grep -v grep)" ] && [[ "$x" = "$y" ]]' >> ~/.bashrc
+printf  '\nwhile true \n do \n sleep 10 \n x=$(xdotool getmouselocation --shell 2>/dev/null) \n sleep 10 \n y=$(xdotool getmouselocation --shell 2>/dev/null) \n if [[ $(xprintidle)' >> ~/.bashrc
+printf " -gt $time ]]" >> ~/.bashrc
+printf ' && [[ -z "$(ps t | grep apt-get | grep -v grep)" ]] && [[ "$x" = "$y" ]]' >> ~/.bashrc
 printf "Only start asciidle if there's nothing running in the terminal (experimental). Yes or no? (y/n) "
 read response
 
